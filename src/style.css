@@ -1,0 +1,12 @@
+.board{
+    width: 900px;
+    height: 700px;
+    background-color: lightgreen;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color:azure;
+    border:1px solid gray;
+}

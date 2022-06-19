@@ -1,15 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export const userInDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+
+const initilaVlaue = {
+  theme: {
+    type: userInDarkMode ? 1 : 2,
+    userTheme: false,
+    pointerPos: 0,
+  },
+  calculator: {
+    firstValue: '0',
+    operator: '',
+    secondValue: '',
+    result: '',
+  },
+  data: {
+    name: 'state',
+    storageType: localStorage,
+  }
+}
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <App text={''} />
   </React.StrictMode>
 );
 
